@@ -1,0 +1,12 @@
+button, p {
+  width: 10vw;
+  margin: 5px;
+}
+
+p {
+  display: inline-block;
+}
+
+.dhidd {
+  visibility: hidden;
+}
