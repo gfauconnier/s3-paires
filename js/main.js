@@ -4,7 +4,7 @@ var arr = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
 
 var ps = document.getElementsByTagName("p");
 
-var btns = document.getElementsByClassName("clickable");
+var btns = document.getElementsByTagName("button");
 Array.from(btns).forEach(function(element) {element.addEventListener('click', testCard)});
 
 cardReset();
@@ -17,7 +17,6 @@ function cardReset() {
     arr[i] = arr[rand];
     arr[rand] = temp;
   }
-
   arr.forEach(function(item, index) {
     ps[index].innerHTML = item;
   });
@@ -35,7 +34,11 @@ function testCard() {
     document.getElementById(this.id).classList.add("dhidd");
     flag = 0;
   } else {
-    document.getElementById(tempCard[1]).classList.remove("dhidd");
+    document.getElementById(this.id).classList.add("dhidd");
     flag = 0;
+    setTimeout(function(){
+      document.getElementById(tempCard[1]).classList.remove("dhidd");
+      document.getElementById(nb).classList.remove("dhidd");
+    },500);
   }
 }
