@@ -2,14 +2,19 @@ div, p {
   width: 10vw;
   margin: 5px;
 }
+
 div {
-  height: 5vh;
+  height: 20vh;
+  border: 1px solid black;
+  border-radius: 50%;
 }
 
-p {
+p, div {
   display: inline-block;
 }
 
 .dhidd {
-  background-color: red;
+  background-image: url(../img/index.jpeg);
+  background-size: cover;
+  background-position: center;
 }
