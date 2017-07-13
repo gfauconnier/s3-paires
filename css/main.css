@@ -1,16 +1,26 @@
-div, p {
-  width: 10vw;
-  margin: 5px;
+section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+h1, h2, article {
+  width: 100%;
+  padding: 0 5px;
 }
 
 div {
-  height: 20vh;
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  margin: 5px;
   border: 1px solid black;
   border-radius: 50%;
 }
 
-p, div {
-  display: inline-block;
+div:hover {
+  border: 1px solid grey;
+  box-shadow: 3px 3px lightgrey;
 }
 
 .dhidd {
