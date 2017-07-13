@@ -59,3 +59,7 @@ div.card:hover, div.choiceBack:hover {
   background-size: cover;
   background-position: center;
 }
+
+button.btn {
+  font-size: 2em;
+}
