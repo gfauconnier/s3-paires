@@ -1,16 +1,21 @@
-section {
+@font-face {
+  font-family: abszero;
+  src: url(abszero.otf);
+}
+
+section, div#choices, div.main {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 }
 
 h1, h2, article {
+  font-family: abszero;
   width: 100%;
   padding: 0 5px;
 }
 
-div {
-  display: inline-block;
+div.card, div.choiceBack {
   width: 160px;
   height: 160px;
   margin: 5px;
@@ -18,13 +23,13 @@ div {
   border-radius: 50%;
 }
 
-div:hover {
+div.card:hover, div.choiceBack:hover {
   border: 1px solid grey;
   box-shadow: 3px 3px lightgrey;
 }
 
-.dhidd {
-  background-image: url(../img/index.jpeg);
+.dhidd, div.choiceBack {
+
   background-size: cover;
   background-position: center;
 }
