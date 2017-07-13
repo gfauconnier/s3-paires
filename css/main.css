@@ -3,16 +3,42 @@
   src: url(abszero.otf);
 }
 
-section, div#choices, div.main {
+h1, h2, div.head, div.main {
+  font-family: abszero;
+  padding: 0 5px;
+}
+
+h1, h2 {
+  color: #00FF00;
+}
+
+div.head, div.main {
+    width: 100%;
+}
+
+div.head {
+  border-bottom: 2px outset black;
+  border-top: 2px outset black;
+}
+
+div.main {
+  padding: 10px;
+}
+
+section, div#choices, div.main, div.head {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  align-items: center;
 }
 
-h1, h2, article {
-  font-family: abszero;
-  width: 100%;
-  padding: 0 5px;
+div.head {
+  height: 15vh;
+  background-color: grey;
+}
+
+body, div.main {
+  background-color: lightgrey;
 }
 
 div.card, div.choiceBack {
