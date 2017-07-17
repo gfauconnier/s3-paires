@@ -1,4 +1,4 @@
-var bgi, flag = 0, compteur = 0, nbTentatives = 0,
+var bgi, flag = 0, compteur = 0, nbTentatives = 0, clickLock = 0,
   tempCard = [0, 0];
 var arr = ["#FFFFFF", "#FFFFFF", "#FF8888", "#FF8888", "#FF0000", "#FF0000", "#00FF00", "#00FF00", "#0000FF", "#0000FF", "#8888FF", "#8888FF", "#88FF88", "#88FF88"];
 
@@ -32,8 +32,7 @@ function cardReset() {
 
 function testCard() {
   var nb = this.id;
-  if (this.classList.contains("dhidd")) {
-
+  if (this.classList.contains("dhidd") && clickLock == 0) {
     if (flag == 0) {
       tempCard[0] = this.style.backgroundColor;
       tempCard[1] = this.id;
@@ -50,15 +49,16 @@ function testCard() {
       document.getElementById(this.id).classList.remove("dhidd");
       document.getElementById(this.id).style.backgroundImage = "";
       flag = 0;
+      clickLock = 1;
       setTimeout(function() {
         document.getElementById(tempCard[1]).classList.add("dhidd");
         document.getElementById(nb).classList.add("dhidd");
         document.getElementById(tempCard[1]).style.backgroundImage = bgi;
         document.getElementById(nb).style.backgroundImage = bgi;
+        clickLock = 0;
       }, 500);
       nbTentatives++;
     }
-
   }
 
   if (compteur == 7) {
